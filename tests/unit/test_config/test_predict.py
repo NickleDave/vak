@@ -5,7 +5,6 @@ import unittest
 
 import vak.config.predict
 import vak.split
-from vak.core.learncurve import LEARN_CURVE_DIR_STEM
 
 HERE = Path(__file__).parent
 TEST_DATA_DIR = HERE.joinpath('..', '..', 'test_data')
