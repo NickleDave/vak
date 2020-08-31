@@ -1,5 +1,5 @@
 {% set name = "vak" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 42780295bef28693980d02dc9a748b12c8672b1de3413506c05db6ed787cb5a7
+  sha256: 6047769e2c11a86febe2cf2fab9f82c53be848644c0bb4f9c356d20d5e8060c0
 
 build:
   number: 0
@@ -17,32 +17,34 @@ build:
 
 requirements:
   host:
-    - attrs >=19.1.*
-    - crowsetta ==1.1.1
-    - dask >=2.1.*
-    - dask-core >=2.1.*
-    - joblib
-    - matplotlib
-    - numpy >=1.16
+    - attrs >=19.3.*
+    - crowsetta ==2.2.0
+    - dask >=2.10.*
+    - dask-core >=2.10.*
+    - joblib >=0.14.1
+    - matplotlib >=3.1.3
+    - numpy >=1.18.1
     - pip
     - python >=3.6.*
-    - scipy
-    - tensorflow =1.13
-    - tensorflow-gpu =1.13
-    - tqdm
+    - pytorch >=1.4.0
+    - scipy >=1.4.1
+    - toml >= 0.10.0
+    - torchvision >=0.5.0
+    - tqdm >=4.42.1
+
   run:
-    - attrs >=19.1.*
-    - crowsetta ==1.1.1
-    - dask >=2.1.*
-    - dask-core >=2.1.*
-    - joblib
-    - matplotlib
-    - numpy >=1.16
+    - attrs >=19.3.*
+    - crowsetta ==2.2.0
+    - dask >=2.10.*
+    - dask-core >=2.10.*
+    - joblib >=0.14.1
+    - matplotlib >=3.1.3
+    - numpy >=1.18.1
     - python >=3.6.*
-    - scipy
-    - tensorflow =1.13
-    - tensorflow-gpu =1.13
-    - tqdm
+    - scipy >=1.4.1
+    - toml >= 0.10.0
+    - torchvision >=0.5.0
+    - tqdm >=4.42.1
 
 test:
   imports:
