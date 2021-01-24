@@ -16,7 +16,9 @@ def spect_list_mat(spect_dir_mat):
 
 @pytest.fixture
 def spect_dir_npz(generated_test_data_root):
-    return sorted(generated_test_data_root.joinpath('prep', 'train').glob('spectrograms_generated*'))[0]
+    return sorted(generated_test_data_root.joinpath('prep',
+                                                    'train',
+                                                    'audio_cbin_annot_notmat').glob('spectrograms_generated*'))[0]
 
 
 @pytest.fixture
